@@ -1,0 +1,36 @@
+﻿Arlington	AP 
+Aqueduct	AQU
+Atlantic	City	ATL
+Belmont	BEL
+Beulah Park	BEU
+Churhill Downs	CD 
+Calder Race Track	CRC
+Delta Downs	DED
+Delaware Park	DEL
+Del Mar	DMR
+Ellis Park	ELP
+Evangeline Downs	EVD
+Fair Grounds	FG 
+Fairplaix	FPX
+Golden Gate	GG 
+Gulfstream Park	GP 
+Hawthorn	HAW
+Hollywood	Park	HOL
+Hoosier Park	HOO
+Keenland	KEE
+Louisiana	Downs	LAD
+Laurel	LRL
+Lone Star	Park	LS 
+Meadowlands	MED
+Monmouth	MTH
+Oaklawn Park	OP 
+Oak Tree SA	OSA
+pen	pen
+PARX	PHA
+Pimlico	PIM
+Retama Park	RET
+Santa Anita	SA 
+Saratoga	SAR
+Suffolk Downs	SUF
+Tampa Bay Downs	TAM
+Turfway Park	TP 

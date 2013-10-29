@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{43DCA87F-515A-4CA5-AC20-4855D33860FA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hogar</RootNamespace>
+    <AssemblyName>Hogar</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Hogar\Algorithms\ANN\InputData\StarterInfo.CreationOfFile.cs" />
+    <Compile Include="Hogar\Algorithms\ANN\InputData\StarterInfo.cs" />
+    <Compile Include="Hogar\Algorithms\ANN\InputData\StarterInfo.NormalizationLogic.cs" />
+    <Compile Include="Hogar\Algorithms\ANN\Neurons\GeneticNNTrainer\Chromosome.cs" />
+    <Compile Include="Hogar\Algorithms\ANN\Neurons\GeneticNNTrainer\Generation.cs" />
+    <Compile Include="Hogar\Algorithms\ANN\Neurons\GeneticNNTrainer\Randomizer.cs" />
+    <Compile Include="Hogar\Algorithms\ANN\Neurons\GeneticNNTrainer\Trainer.cs" />
+    <Compile Include="Hogar\Algorithms\ANN\Neurons\Neuron.cs" />
+    <Compile Include="Hogar\Algorithms\ANN\InputData\NeuronLayer.cs" />
+    <Compile Include="Hogar\Algorithms\ANN\Neurons\NeuronNetwork.cs" />
+    <Compile Include="Hogar\Algorithms\ANN\Neurons\NeuronNetworks\DetectImprovementNeuronNetwork.cs" />
+    <Compile Include="Hogar\Algorithms\ANN\Neurons\NeuronNetworks\ChooseBetweenFirstAndSecondFavoriteNeuronNetwork.cs" />
+    <Compile Include="Hogar\Algorithms\ANN\Neurons\NeuronNetworks\DetectWinnerNeuronNetwork.cs" />
+    <Compile Include="Hogar\Algorithms\ANN\Neurons\NeuronNetworks\DetectWinnerNeuronNetwork.SelectionEngine.cs" />
+    <Compile Include="Hogar\Algorithms\ANN\Neurons\NeuronNetworks\MemoryBasedNeuronNetwork.cs" />
+    <Compile Include="Hogar\Algorithms\ANN\Neurons\OutputLayer.cs" />
+    <Compile Include="Hogar\Algorithms\ANN\Neurons\OutputNeuron.cs" />
+    <Compile Include="Hogar\Algorithms\ANN\Neurons\Synapse.cs" />
+    <Compile Include="Hogar\Algorithms\ANN\Neurons\TresholdNeuron.cs" />
+    <Compile Include="Hogar\Algorithms\ANN\PattenStatistics\PatternStatistic.cs" />
+    <Compile Include="Hogar\Algorithms\ANN\PattenStatistics\PatternStatisticCollection.cs" />
+    <Compile Include="Hogar\Algorithms\ANN\PatternCollection.cs" />
+    <Compile Include="Hogar\Algorithms\ANN\Pattern.cs" />
+    <Compile Include="Hogar\Algorithms\CombinationCalculator.cs" />
+    <Compile Include="Hogar\Algorithms\TrackVariant\DatesEdge.cs" />
+    <Compile Include="Hogar\Algorithms\TrackVariant\DateVertex.cs" />
+    <Compile Include="Hogar\Algorithms\TrackVariant\GraphUtilities.cs" />
+    <Compile Include="Hogar\Algorithms\TrackVariant\TrackVariantGraph.cs" />
+    <Compile Include="Hogar\BettingModels\BettingModel.cs" />
+    <Compile Include="Hogar\Betting\Superfecta\ISuperfectaLimitation.cs" />
+    <Compile Include="Hogar\Betting\Superfecta\MandatoryHorseLimitation.cs" />
+    <Compile Include="Hogar\Betting\Superfecta\RaceSelection.cs" />
+    <Compile Include="Hogar\Betting\Superfecta\SuperfectaSystem.cs" />
+    <Compile Include="Hogar\Betting\Superfecta\ValidCombinationLimitation.cs" />
+    <Compile Include="Hogar\Betting\TrifectaFullSystem.cs" />
+    <Compile Include="Hogar\Betting\TrifectaSubsystem.cs" />
+    <Compile Include="Hogar\BrisPastPerformances\BrisWorkouts.cs" />
+    <Compile Include="Hogar\BrisPastPerformances\Extended\BrisDailyCard.cs" />
+    <Compile Include="Hogar\BrisPastPerformances\Extended\BrisHorse.cs" />
+    <Compile Include="Hogar\BrisPastPerformances\Extended\BrisPastPerformance.cs" />
+    <Compile Include="Hogar\BrisPastPerformances\Extended\BrisRace.cs" />
+    <Compile Include="Hogar\BrisPastPerformances\Extended\BrisWorkouts.cs" />
+    <Compile Include="Hogar\BrisPastPerformances\Extended\FractionCall.cs" />
+    <Compile Include="Hogar\BrisPastPerformances\Extended\Sartin.cs" />
+    <Compile Include="Hogar\BrisPastPerformances\PaceFigure.cs" />
+    <Compile Include="Hogar\BrisPastPerformances\Sartin.cs" />
+    <Compile Include="Hogar\ClassEstimator.cs" />
+    <Compile Include="Hogar\Cynthia\AverageVariant.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Hogar\Cynthia\CynthiaPar.cs" />
+    <Compile Include="Hogar\DbTools\BatchExecutor.cs" />
+    <Compile Include="Hogar\DbTools\DataBaseCollection.cs" />
+    <Compile Include="Hogar\DbTools\DbReader.cs" />
+    <Compile Include="Hogar\DbTools\DbTools.cs" />
+    <Compile Include="Hogar\DailyCard.cs" />
+    <Compile Include="Hogar\DbTools\IDbPopulatable.cs" />
+    <Compile Include="Hogar\DbTools\ListConverter.cs" />
+    <Compile Include="Hogar\ExFigure\ParSpeed.cs" />
+    <Compile Include="Hogar\ExFigure\ParSpeedCalculator.cs" />
+    <Compile Include="Hogar\FactorStatisticsNew\FactorStatistic.cs" />
+    <Compile Include="Hogar\FactorStatisticsNew\FactorStatisticManager.cs" />
+    <Compile Include="Hogar\FactorStatisticsNew\FactorStatisticsForTrainer\FactorStatisticsForTrainerManager.cs" />
+    <Compile Include="Hogar\FactorStatisticsNew\FactorStatisticsForTrainer\Starter.cs" />
+    <Compile Include="Hogar\FactorStatisticsNew\FactorStatisticsForTrainer\StarterCollection.cs" />
+    <Compile Include="Hogar\FactorStatisticsNew\FactorStatisticsForTrainer\StatisticDataAccumulator.cs" />
+    <Compile Include="Hogar\FactorStatisticsNew\FactorStatisticsForTrainer\StatisticDataAccumulatorCollection.cs" />
+    <Compile Include="Hogar\Filter\EliminateBasedInBrisFigureDistribution.cs" />
+    <Compile Include="Hogar\Filter\FilterCollection.cs" />
+    <Compile Include="Hogar\Filter\Filter.cs" />
+    <Compile Include="Hogar\Filter\FirstTimeOutFilter.cs" />
+    <Compile Include="Hogar\Filter\LastYearWinningsFilter.cs" />
+    <Compile Include="Hogar\Filter\LongLayoffFilter.cs" />
+    <Compile Include="Hogar\Filter\MuddyTrackFilter.cs" />
+    <Compile Include="Hogar\Filter\TurfFilter.cs" />
+    <Compile Include="Hogar\GeneticProgramming\DecisionTreeList.cs" />
+    <Compile Include="Hogar\GeneticProgramming\DecisionTreeStatistics.cs" />
+    <Compile Include="Hogar\GeneticProgramming\FunctionAnd.cs" />
+    <Compile Include="Hogar\GeneticProgramming\FunctionFactory.cs" />
+    <Compile Include="Hogar\GeneticProgramming\FunctionNot.cs" />
+    <Compile Include="Hogar\GeneticProgramming\FunctionOr.cs" />
+    <Compile Include="Hogar\GeneticProgramming\Node.cs" />
+    <Compile Include="Hogar\GeneticProgramming\NodeFactory.cs" />
+    <Compile Include="Hogar\GeneticProgramming\Randomizer.cs" />
+    <Compile Include="Hogar\GeneticProgramming\Terminal.cs" />
+    <Compile Include="Hogar\GeneticProgramming\DecisionTree.cs" />
+    <Compile Include="Hogar\GeneticProgramming\Token.cs" />
+    <Compile Include="Hogar\Handicapping\Analysis\FactorPerformance.cs" />
+    <Compile Include="Hogar\Handicapping\Analysis\FactorRetriever.cs" />
+    <Compile Include="Hogar\Handicapping\Analysis\RaceAttributes.cs" />
+    <Compile Include="Hogar\Handicapping\BeatenFavoriteInLastTwoRaces.cs" />
+    <Compile Include="Hogar\Handicapping\BlinkersOff.cs" />
+    <Compile Include="Hogar\Handicapping\BlinkersOn.cs" />
+    <Compile Include="Hogar\Handicapping\BrisCompositeTop.cs" />
+    <Compile Include="Hogar\Handicapping\BrisCompositeTopThree.cs" />
+    <Compile Include="Hogar\Handicapping\BrisLateTop.cs" />
+    <Compile Include="Hogar\Handicapping\BrisLateTopThree.cs" />
+    <Compile Include="Hogar\Handicapping\BrisTopClassAndRaceRating.cs" />
+    <Compile Include="Hogar\Handicapping\ChangedStyle.cs" />
+    <Compile Include="Hogar\Handicapping\DoubleMove.cs" />
+    <Compile Include="Hogar\Handicapping\FemaleAgainstMale.cs" />
+    <Compile Include="Hogar\Handicapping\GoodWorkouts.cs" />
+    <Compile Include="Hogar\Handicapping\Layoff.cs" />
+    <Compile Include="Hogar\Handicapping\LongLayoff.cs" />
+    <Compile Include="Hogar\Handicapping\LostGroundInLastRace.cs" />
+    <Compile Include="Hogar\Handicapping\LostMoreThanFiveInTheRow.cs" />
+    <Compile Include="Hogar\Handicapping\OlderMaiden.cs" />
+    <Compile Include="Hogar\Handicapping\SecondOfLayoff.cs" />
+    <Compile Include="Hogar\Handicapping\ShortBreak.cs" />
+    <Compile Include="Hogar\Handicapping\ThirdOfLayoff.cs" />
+    <Compile Include="Hogar\Handicapping\ThreeYOAgainstOlder.cs" />
+    <Compile Include="Hogar\Handicapping\TopAvgBrisClassRating.cs" />
+    <Compile Include="Hogar\Handicapping\TopPrimePowerOnlyDirt.cs" />
+    <Compile Include="Hogar\Handicapping\TopThreeAvgBrisClassRating.cs" />
+    <Compile Include="Hogar\Handicapping\TwoConsequtiveWins.cs" />
+    <Compile Include="Hogar\Handicapping\ComingFromBigWin.cs" />
+    <Compile Include="Hogar\Handicapping\DropsFromAlwToClm.cs" />
+    <Compile Include="Hogar\Handicapping\DropsToMCLForFirstTime.cs" />
+    <Compile Include="Hogar\Handicapping\Factor.cs" />
+    <Compile Include="Hogar\Handicapping\FirstAfterBreakingMdn.cs" />
+    <Compile Include="Hogar\Handicapping\FirstTimeDirt.cs" />
+    <Compile Include="Hogar\Handicapping\FirstTimeLasix.cs" />
+    <Compile Include="Hogar\Handicapping\FirstTimeOut.cs" />
+    <Compile Include="Hogar\Handicapping\FirstTimeRouteToSprint.cs" />
+    <Compile Include="Hogar\Handicapping\FirstTimeSprintToRoute.cs" />
+    <Compile Include="Hogar\Handicapping\FirstTimeTurf.cs" />
+    <Compile Include="Hogar\Handicapping\HadTroubleInLastRace.cs" />
+    <Compile Include="Hogar\Handicapping\TopBrisRating.cs" />
+    <Compile Include="Hogar\Handicapping\TopPrimePower.cs" />
+    <Compile Include="Hogar\Handicapping\TopPrimePowerBy4.cs" />
+    <Compile Include="Hogar\Handicapping\BadLast2.cs" />
+    <Compile Include="Hogar\Handicapping\BadLast2ClmOnly.cs" />
+    <Compile Include="Hogar\Handicapping\BestFigures.cs" />
+    <Compile Include="Hogar\Handicapping\UpInClaimingPriceAfterClaimWin.cs" />
+    <Compile Include="Hogar\Handicapping\WillMakeTheLeadEasily.cs" />
+    <Compile Include="Hogar\Horse.cs" />
+    <Compile Include="Hogar\IntraTrackAdjustments.cs" />
+    <Compile Include="Hogar\KeyRaces\KeyRaces.cs" />
+    <Compile Include="Hogar\KeyRaces\RaceInfo.cs" />
+    <Compile Include="Hogar\NeuralNetworkDecision.cs" />
+    <Compile Include="Hogar\Odds.cs" />
+    <Compile Include="Hogar\BrisPastPerformances\FractionCall.cs" />
+    <Compile Include="Hogar\OddsFileName.cs" />
+    <Compile Include="Hogar\Parsing\ParsableText.cs" />
+    <Compile Include="Hogar\Parsing\Token.cs" />
+    <Compile Include="Hogar\BrisPastPerformances\BrisPastPerformance.cs" />
+    <Compile Include="Hogar\BrisPastPerformances\BrisRace.cs" />
+    <Compile Include="Hogar\BrisPastPerformances\BrisDailyCard.cs" />
+    <Compile Include="Hogar\BrisPastPerformances\BrisHorse.cs" />
+    <Compile Include="Hogar\Parsing\Tokenizer.cs" />
+    <Compile Include="Hogar\PostPositionStatistics\PostPositionStatistic.cs" />
+    <Compile Include="Hogar\PostPositionStatistics\PostPositionStatistics.cs" />
+    <Compile Include="Hogar\PostPositionStatistics\PPStatsPerTrackCondition.cs" />
+    <Compile Include="Hogar\PrimeBetRequirements.cs" />
+    <Compile Include="Hogar\PrintUtility.cs" />
+    <Compile Include="Hogar\Race.cs" />
+    <Compile Include="Hogar\ExFigure\RaceClassification.cs" />
+    <Compile Include="Hogar\RaceAnalyzer\FirstTimesAnalyst.cs" />
+    <Compile Include="Hogar\RaceAnalyzer\HeaderAnalyst.cs" />
+    <Compile Include="Hogar\RaceAnalyzer\LayoffAnalyst.cs" />
+    <Compile Include="Hogar\RaceAnalyzer\RaceAnalyst.cs" />
+    <Compile Include="Hogar\RaceAnalyzer\RaceAnalyzer.cs" />
+    <Compile Include="Hogar\RaceChart\RaceChart.cs" />
+    <Compile Include="Hogar\RaceChart\RaceChartLine.cs" />
+    <Compile Include="Hogar\RaceGrouping\BadFavorite.cs" />
+    <Compile Include="Hogar\RaceGrouping\GoodBetBasedInOdds.cs" />
+    <Compile Include="Hogar\RaceGrouping\GoodFavorite.cs" />
+    <Compile Include="Hogar\RaceGrouping\OddsTreshold.cs" />
+    <Compile Include="Hogar\RaceGrouping\RaceGroupType.cs" />
+    <Compile Include="Hogar\RaceGrouping\TargetGroup.cs" />
+    <Compile Include="Hogar\RaceResults\HorsePastPerformance.cs" />
+    <Compile Include="Hogar\RaceResults\HorsePastPerformanceCollection.cs" />
+    <Compile Include="Hogar\RaceResults\RaceResults.cs" />
+    <Compile Include="Hogar\RaceResults\RaceResultsInsertToDb.cs" />
+    <Compile Include="Hogar\RaceResults\RaceDescriptiveData.cs" />
+    <Compile Include="Hogar\RaceResults\RaceExoticBetPayoff.cs" />
+    <Compile Include="Hogar\RaceResults\RaceFootNotes.cs" />
+    <Compile Include="Hogar\RaceResults\RaceStartersData.cs" />
+    <Compile Include="Hogar\RaceResults\RaceStraightBetPayoff.cs" />
+    <Compile Include="Hogar\RaceTrackInfo.cs" />
+    <Compile Include="Hogar\RaceTracks.cs" />
+    <Compile Include="Hogar\ExFigure\SpeedNormalizer.cs" />
+    <Compile Include="Hogar\RealTimeTools\OddsRetriever.cs" />
+    <Compile Include="Hogar\Research\GeneticAlgorithm\BackTester.cs" />
+    <Compile Include="Hogar\Research\GeneticAlgorithm\Partition.cs" />
+    <Compile Include="Hogar\Research\GeneticAlgorithm\PartitionCollection.cs" />
+    <Compile Include="Hogar\Research\GeneticAlgorithm\Randomizer.cs" />
+    <Compile Include="Hogar\Research\GeneticAlgorithm\Solution.cs" />
+    <Compile Include="Hogar\Research\GeneticAlgorithm\SolutionPopulation.cs" />
+    <Compile Include="Hogar\Research\GeneticAlgorithm\Horse.cs" />
+    <Compile Include="Hogar\Research\GeneticAlgorithm\Race.cs" />
+    <Compile Include="Hogar\Research\GeneticAlgorithm\RaceCollection.cs" />
+    <Compile Include="Hogar\Research\PickXAnalyzer\Result.cs" />
+    <Compile Include="Hogar\Research\PickXAnalyzer\Results.cs" />
+    <Compile Include="Hogar\Research\PickXAnalyzer\Winner.cs" />
+    <Compile Include="Hogar\Research\PickXAnalyzer\WinnersSequence.cs" />
+    <Compile Include="Hogar\SpeedInfo.cs" />
+    <Compile Include="Hogar\StatisticTools\BackTestConstant.cs" />
+    <Compile Include="Hogar\StatisticTools\CalculateOptimalConstant.cs" />
+    <Compile Include="Hogar\StatisticTools\FiguresToProbabilities.cs" />
+    <Compile Include="Hogar\StatisticTools\HistogramData.cs" />
+    <Compile Include="Hogar\StatisticTools\ImpactValueStat.cs" />
+    <Compile Include="Hogar\StatisticTools\JockeyStatistics.cs" />
+    <Compile Include="Hogar\StatisticTools\JockeyTrainerStatistics.cs" />
+    <Compile Include="Hogar\StatisticTools\LeastSquaresCalculator.cs" />
+    <Compile Include="Hogar\StatisticTools\Starter.cs" />
+    <Compile Include="Hogar\StatisticTools\StarterCollection.cs" />
+    <Compile Include="Hogar\StatisticTools\TrainerStatistics.cs" />
+    <Compile Include="Hogar\StatisticTools\TrainerStatisticsCollection.cs" />
+    <Compile Include="Hogar\TrackVariant.cs" />
+    <Compile Include="Hogar\Trainers.cs" />
+    <Compile Include="Hogar\Utilities.cs" />
+    <Compile Include="Hogar\WebBrowser\WebBrowserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hogar\WebBrowser\WebBrowserForm.Designer.cs">
+      <DependentUpon>WebBrowserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hogar\Willard\Distance.cs" />
+    <Compile Include="Hogar\Willard\DistanceCollection.cs" />
+    <Compile Include="Hogar\Willard\RaceInfo.cs" />
+    <Compile Include="Hogar\Willard\WillardSpeedFigure.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Hogar\SireStats\Sire.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Hogar\WebBrowser\WebBrowserForm.resx">
+      <DependentUpon>WebBrowserForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Hogar\Combinatorics\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sipp\Sipp.csproj">
+      <Project>{BDB55BBF-DC67-4CC6-A414-3A1856FFC395}</Project>
+      <Name>Sipp</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

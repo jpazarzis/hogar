@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9106EB21-B97C-484E-BE1C-8FEECEFF5B46}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TrackVariantMaint</RootNamespace>
+    <AssemblyName>TrackVariantMaint</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NPlot, Version=0.9.10.0, Culture=neutral, PublicKeyToken=4eda430eb4395eb1">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\NPlotGraphControl\nplot-0.9.10.0\nplot-0.9.10.0\bin\net\1.1\debug\NPlot.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnalysisPerTrack\AnalysisPerTrackForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnalysisPerTrack\AnalysisPerTrackForm.Designer.cs">
+      <DependentUpon>AnalysisPerTrackForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnalysisPerTrack\Partition.cs" />
+    <Compile Include="AnalysisPerTrack\TrackPartitionControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnalysisPerTrack\TrackPartitionControl.Designer.cs">
+      <DependentUpon>TrackPartitionControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnalysisPerTrack\WinnersTime.cs" />
+    <Compile Include="AnalysisPerTrack\WinnersTimeCollection.cs" />
+    <Compile Include="IntraTrackVariant\AdjustIntraTrackVariantForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IntraTrackVariant\AdjustIntraTrackVariantForm.Designer.cs">
+      <DependentUpon>AdjustIntraTrackVariantForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IntraTrackStarterInfo.cs" />
+    <Compile Include="IntraTrackStarterInfoCollection.cs" />
+    <Compile Include="IntraTrackVariantForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IntraTrackVariantForm.Designer.cs">
+      <DependentUpon>IntraTrackVariantForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IntraTrackVariant\AvgGoldenFigure.cs" />
+    <Compile Include="IntraTrackVariant\AvgGoldenFigureCollection.cs" />
+    <Compile Include="IntraTrackVariant\StandardAdjustment.cs" />
+    <Compile Include="IntraTrackVariant\StandardAdjustmentCollection.cs" />
+    <Compile Include="IntraTrackVariant\TrackIntravariant.cs" />
+    <Compile Include="IntraTrackVariant\TrackIntravariantCollection.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrackVariantForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrackVariantForm.Designer.cs">
+      <DependentUpon>TrackVariantForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AnalysisPerTrack\AnalysisPerTrackForm.resx">
+      <DependentUpon>AnalysisPerTrackForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnalysisPerTrack\TrackPartitionControl.resx">
+      <DependentUpon>TrackPartitionControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IntraTrackVariant\AdjustIntraTrackVariantForm.resx">
+      <DependentUpon>AdjustIntraTrackVariantForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IntraTrackVariantForm.resx">
+      <DependentUpon>IntraTrackVariantForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrackVariantForm.resx">
+      <DependentUpon>TrackVariantForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="StarterInfo.cs" />
+    <Compile Include="StarterInfoCollection.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Hogar\Hogar.csproj">
+      <Project>{43DCA87F-515A-4CA5-AC20-4855D33860FA}</Project>
+      <Name>Hogar</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

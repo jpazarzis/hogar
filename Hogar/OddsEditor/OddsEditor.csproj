@@ -1,0 +1,1167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A5AC4D09-FE08-4AFF-B272-A780F26F661F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OddsEditor</RootNamespace>
+    <AssemblyName>OddsEditor</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>horse_image.jpg</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IronPython, Version=2.6.10920.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Program Files\IronPython 2.6\IronPython.dll</HintPath>
+    </Reference>
+    <Reference Include="IronPython.Modules, Version=2.6.10920.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Program Files\IronPython 2.6\IronPython.Modules.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Dynamic, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Program Files\IronPython 2.6\Microsoft.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Scripting, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Program Files\IronPython 2.6\Microsoft.Scripting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Scripting.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Program Files\IronPython 2.6\Microsoft.Scripting.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Scripting.Debugging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Program Files\IronPython 2.6\Microsoft.Scripting.Debugging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Scripting.ExtensionAttribute, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Program Files\IronPython 2.6\Microsoft.Scripting.ExtensionAttribute.dll</HintPath>
+    </Reference>
+    <Reference Include="NPlot, Version=0.9.10.0, Culture=neutral, PublicKeyToken=4eda430eb4395eb1">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\NPlotGraphControl\nplot-0.9.10.0\nplot-0.9.10.0\bin\net\1.1\debug\NPlot.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Windows.Presentation">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\AddCynthiaParManuallyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\AddCynthiaParManuallyForm.Designer.cs">
+      <DependentUpon>AddCynthiaParManuallyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\BacktestProbabilityCalculatorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\BacktestProbabilityCalculatorForm.Designer.cs">
+      <DependentUpon>BacktestProbabilityCalculatorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\CompareRaceTracksForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\CompareRaceTracksForm.Designer.cs">
+      <DependentUpon>CompareRaceTracksForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\CreateSippFileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\CreateSippFileForm.Designer.cs">
+      <DependentUpon>CreateSippFileForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\CynthiaParsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\CynthiaParsForm.Designer.cs">
+      <DependentUpon>CynthiaParsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\CynthiaProjectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\CynthiaProjectionForm.Designer.cs">
+      <DependentUpon>CynthiaProjectionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\EditHorseWeightsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\EditHorseWeightsForm.Designer.cs">
+      <DependentUpon>EditHorseWeightsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\EditRaceTrackInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\EditRaceTrackInfoForm.Designer.cs">
+      <DependentUpon>EditRaceTrackInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ExoticCombinationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ExoticCombinationForm.Designer.cs">
+      <DependentUpon>ExoticCombinationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FilterFactorsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FilterFactorsForm.Designer.cs">
+      <DependentUpon>FilterFactorsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FirstSecondAndThridInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FirstSecondAndThridInfoForm.Designer.cs">
+      <DependentUpon>FirstSecondAndThridInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\HandicappingFactorWorkbenchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\HandicappingFactorWorkbenchForm.Designer.cs">
+      <DependentUpon>HandicappingFactorWorkbenchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\HorseFiguresForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\HorseFiguresForm.Designer.cs">
+      <DependentUpon>HorseFiguresForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\HorseNotesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\HorseNotesForm.Designer.cs">
+      <DependentUpon>HorseNotesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\HorsesMatchingFactorsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\HorsesMatchingFactorsForm.Designer.cs">
+      <DependentUpon>HorsesMatchingFactorsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\TrainerStarters\IndividualTrainerStatsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\TrainerStarters\IndividualTrainerStatsForm.Designer.cs">
+      <DependentUpon>IndividualTrainerStatsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\JockeyStatistics\JockeyStarter.cs" />
+    <Compile Include="Dialogs\JockeyStatistics\JockeyStatisticsCollection.cs" />
+    <Compile Include="Dialogs\JockeyStatistics\JockeyStatisticsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\JockeyStatistics\JockeyStatisticsForm.Designer.cs">
+      <DependentUpon>JockeyStatisticsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\KellyCalculatorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\KellyCalculatorForm.Designer.cs">
+      <DependentUpon>KellyCalculatorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\MaintRaceTracksForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\MaintRaceTracksForm.Designer.cs">
+      <DependentUpon>MaintRaceTracksForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\PostPositionBehavior\PostPositionBehaviorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\PostPositionBehavior\PostPositionBehaviorForm.Designer.cs">
+      <DependentUpon>PostPositionBehaviorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\PrimeBetSpecificationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\PrimeBetSpecificationForm.Designer.cs">
+      <DependentUpon>PrimeBetSpecificationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\RaceAttributesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\RaceAttributesForm.Designer.cs">
+      <DependentUpon>RaceAttributesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\RaceChartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\RaceChartForm.Designer.cs">
+      <DependentUpon>RaceChartForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\RaceTrackSettingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\RaceTrackSettingForm.Designer.cs">
+      <DependentUpon>RaceTrackSettingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\RealTimeOddsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\RealTimeOddsForm.Designer.cs">
+      <DependentUpon>RealTimeOddsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\WinnersForDay\ShowFractionsForTheDayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\WinnersForDay\ShowFractionsForTheDayForm.Designer.cs">
+      <DependentUpon>ShowFractionsForTheDayForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ShowRacesByHorseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ShowRacesByHorseForm.Designer.cs">
+      <DependentUpon>ShowRacesByHorseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\RaceResultsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\RaceResultsForm.Designer.cs">
+      <DependentUpon>RaceResultsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\SuperStudio\SuperStudioForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\SuperStudio\SuperStudioForm.Designer.cs">
+      <DependentUpon>SuperStudioForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\TrainerFilterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\TrainerFilterForm.Designer.cs">
+      <DependentUpon>TrainerFilterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\TrainerStatisticsSummaryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\TrainerStatisticsSummaryForm.Designer.cs">
+      <DependentUpon>TrainerStatisticsSummaryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\TrifectaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\TrifectaForm.Designer.cs">
+      <DependentUpon>TrifectaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\UpcomingRacesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\UpcomingRacesForm.Designer.cs">
+      <DependentUpon>UpcomingRacesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\UpdateFactorsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\UpdateFactorsForm.Designer.cs">
+      <DependentUpon>UpdateFactorsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\WinnersTimeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\WinnersTimeForm.Designer.cs">
+      <DependentUpon>WinnersTimeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GenericForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenericForm.Designer.cs">
+      <DependentUpon>GenericForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyComponents\BackTestControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyComponents\BackTestControl.Designer.cs">
+      <DependentUpon>BackTestControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyComponents\BreedingInfoCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyComponents\BreedingInfoCtrl.Designer.cs">
+      <DependentUpon>BreedingInfoCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CalculateConstantsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CalculateConstantsControl.Designer.cs">
+      <DependentUpon>CalculateConstantsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyComponents\CynthiaParsSummaryCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyComponents\CynthiaParsSummaryCtrl.Designer.cs">
+      <DependentUpon>CynthiaParsSummaryCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyComponents\CynthiaProjectionsCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyComponents\CynthiaProjectionsCtrl.Designer.cs">
+      <DependentUpon>CynthiaProjectionsCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyComponents\CynthiaProjectionsFullCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyComponents\CynthiaProjectionsFullCtrl.Designer.cs">
+      <DependentUpon>CynthiaProjectionsFullCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyComponents\FactorPerfomanceCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyComponents\FactorPerfomanceCtrl.Designer.cs">
+      <DependentUpon>FactorPerfomanceCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyComponents\FractionTimesCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyComponents\FractionTimesCtrl.Designer.cs">
+      <DependentUpon>FractionTimesCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyComponents\HandicappingFactorLabel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyComponents\HandicappingFactorLabel.Designer.cs">
+      <DependentUpon>HandicappingFactorLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyComponents\HorseFractionsComponent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyComponents\HorseFractionsComponent.Designer.cs">
+      <DependentUpon>HorseFractionsComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyComponents\NumericTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyComponents\NumericTextBox.Designer.cs">
+      <DependentUpon>NumericTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyComponents\OddsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyComponents\OddsControl.Designer.cs">
+      <DependentUpon>OddsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyComponents\PrimitiveHandicappingFactorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyComponents\PrimitiveHandicappingFactorControl.Designer.cs">
+      <DependentUpon>PrimitiveHandicappingFactorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyComponents\RaceCommentsCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyComponents\RaceCommentsCtrl.Designer.cs">
+      <DependentUpon>RaceCommentsCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyComponents\RaceSummaryControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyComponents\RaceSummaryControl.Designer.cs">
+      <DependentUpon>RaceSummaryControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyComponents\SelectFileControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyComponents\SelectFileControl.Designer.cs">
+      <DependentUpon>SelectFileControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyComponents\ShortRaceChartControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyComponents\ShortRaceChartControl.Designer.cs">
+      <DependentUpon>ShortRaceChartControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyComponents\ShowRunTogethersControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyComponents\ShowRunTogethersControl.Designer.cs">
+      <DependentUpon>ShowRunTogethersControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyComponents\TextEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyComponents\TextEditorControl.Designer.cs">
+      <DependentUpon>TextEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyComponents\TrifectaPayoutsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyComponents\TrifectaPayoutsControl.Designer.cs">
+      <DependentUpon>TrifectaPayoutsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyComponents\TrifectaPicksControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyComponents\TrifectaPicksControl.Designer.cs">
+      <DependentUpon>TrifectaPicksControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyComponents\TrifectaSubsystemsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyComponents\TrifectaSubsystemsControl.Designer.cs">
+      <DependentUpon>TrifectaSubsystemsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyComponents\WorkoutComponent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyComponents\WorkoutComponent.Designer.cs">
+      <DependentUpon>WorkoutComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\IndividualHorsePastPerformancesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\IndividualHorsePastPerformancesForm.Designer.cs">
+      <DependentUpon>IndividualHorsePastPerformancesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Summary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Summary.Designer.cs">
+      <DependentUpon>Summary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ChangeTotalAmountBetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ChangeTotalAmountBetForm.Designer.cs">
+      <DependentUpon>ChangeTotalAmountBetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\EditCommentsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\EditCommentsForm.Designer.cs">
+      <DependentUpon>EditCommentsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FractionSpeedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FractionSpeedForm.Designer.cs">
+      <DependentUpon>FractionSpeedForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\HorseDetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\HorseDetailsForm.Designer.cs">
+      <DependentUpon>HorseDetailsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\SelectOddFilenameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\SelectOddFilenameForm.Designer.cs">
+      <DependentUpon>SelectOddFilenameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddCynthiaParManuallyForm.resx">
+      <DependentUpon>AddCynthiaParManuallyForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\BacktestProbabilityCalculatorForm.resx">
+      <DependentUpon>BacktestProbabilityCalculatorForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\BreadAndButterForm.resx">
+      <DependentUpon>BreadAndButterForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CompareRaceTracksForm.resx">
+      <DependentUpon>CompareRaceTracksForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CreateSippFileForm.resx">
+      <DependentUpon>CreateSippFileForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CynthiaParsForm.resx">
+      <DependentUpon>CynthiaParsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CynthiaProjectionForm.resx">
+      <DependentUpon>CynthiaProjectionForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditHorseWeightsForm.resx">
+      <DependentUpon>EditHorseWeightsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditRaceTrackInfoForm.resx">
+      <DependentUpon>EditRaceTrackInfoForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ExoticCombinationForm.resx">
+      <DependentUpon>ExoticCombinationForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FactorAnalysisForm.resx">
+      <DependentUpon>FactorAnalysisForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FactorStatsPerTrainer\FactorStatsPerTrainerForm.resx">
+      <DependentUpon>FactorStatsPerTrainerForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FactorWorkbench\FactorWorkbenchForm.resx">
+      <DependentUpon>FactorWorkbenchForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FilterFactorsForm.resx">
+      <DependentUpon>FilterFactorsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Filter\FiltersForm.resx">
+      <DependentUpon>FiltersForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FirstSecondAndThridInfoForm.resx">
+      <DependentUpon>FirstSecondAndThridInfoForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\HandicappingFactorWorkbenchForm.resx">
+      <DependentUpon>HandicappingFactorWorkbenchForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\HistogramForm.resx">
+      <DependentUpon>HistogramForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\HorseFiguresForm.resx">
+      <DependentUpon>HorseFiguresForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\HorseNotesForm.resx">
+      <DependentUpon>HorseNotesForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\HorsesMatchingFactorsForm.resx">
+      <DependentUpon>HorsesMatchingFactorsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImpactValueForm.resx">
+      <DependentUpon>ImpactValueForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\TrainerStarters\IndividualTrainerStatsForm.resx">
+      <DependentUpon>IndividualTrainerStatsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\JockeyStatistics\JockeyStatisticsForm.resx">
+      <DependentUpon>JockeyStatisticsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\JockeyStatistics\JockeyStatisticsSummaryForm.resx">
+      <DependentUpon>JockeyStatisticsSummaryForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\KellyCalculatorForm.resx">
+      <DependentUpon>KellyCalculatorForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\KeyRacesViewer\HorseCtrl.resx">
+      <DependentUpon>HorseCtrl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\KeyRacesViewer\KeyRacesForm.resx">
+      <DependentUpon>KeyRacesForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\KeyRacesViewer\RaceInfoCtrl.resx">
+      <DependentUpon>RaceInfoCtrl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MaintRaceTracksForm.resx">
+      <DependentUpon>MaintRaceTracksForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PaceFigures\PaceFiguresFilterForm.resx">
+      <DependentUpon>PaceFiguresFilterForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PaceFigures\PaceFiguresForm.resx">
+      <DependentUpon>PaceFiguresForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PostPositionBehavior\PostPositionBehaviorForm.resx">
+      <DependentUpon>PostPositionBehaviorForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PostPositionStatsForm.resx">
+      <DependentUpon>PostPositionStatsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PrimeBetSpecificationForm.resx">
+      <DependentUpon>PrimeBetSpecificationForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PythonEditor\PythonEditorForm.resx">
+      <DependentUpon>PythonEditorForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RaceAnalyzer\RaceAnalyzerForm.resx">
+      <DependentUpon>RaceAnalyzerForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RaceAttributesForm.resx">
+      <DependentUpon>RaceAttributesForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RaceChartForm.resx">
+      <DependentUpon>RaceChartForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RaceTrackSettingForm.resx">
+      <DependentUpon>RaceTrackSettingForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RealTimeOddsForm.resx">
+      <DependentUpon>RealTimeOddsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectCard\SelectCardForm.resx">
+      <DependentUpon>SelectCardForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ShowVotesForAllOddsCategoriesForm.resx">
+      <DependentUpon>ShowVotesForAllOddsCategoriesForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SpeedAnalysisForm.resx">
+      <DependentUpon>SpeedAnalysisForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\StatsForAllTrainersInTheRaceForm.resx">
+      <DependentUpon>StatsForAllTrainersInTheRaceForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Testing\TestingForm.resx">
+      <DependentUpon>TestingForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WinnersForDay\ShowFractionsForTheDayForm.resx">
+      <DependentUpon>ShowFractionsForTheDayForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ShowRacesByHorseForm.resx">
+      <DependentUpon>ShowRacesByHorseForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RaceResultsForm.resx">
+      <DependentUpon>RaceResultsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SuperStudio\SuperStudioForm.resx">
+      <DependentUpon>SuperStudioForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\TrainerFilterForm.resx">
+      <DependentUpon>TrainerFilterForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\TrainerStatisticsSummaryForm.resx">
+      <DependentUpon>TrainerStatisticsSummaryForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\TrifectaForm.resx">
+      <DependentUpon>TrifectaForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\UpcomingRacesForm.resx">
+      <DependentUpon>UpcomingRacesForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\UpdateFactorsForm.resx">
+      <DependentUpon>UpdateFactorsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WinnersForDay\TimeComparisonCtrl.resx">
+      <DependentUpon>TimeComparisonCtrl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WinnersForDay\XRayCtrl.resx">
+      <DependentUpon>XRayCtrl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WinnersTimeForm.resx">
+      <DependentUpon>WinnersTimeForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenericForm.resx">
+      <DependentUpon>GenericForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyComponents\BackTestControl.resx">
+      <DependentUpon>BackTestControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyComponents\BreedingInfoCtrl.resx">
+      <DependentUpon>BreedingInfoCtrl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyComponents\BrisFiguresStatsCtrl.resx">
+      <DependentUpon>BrisFiguresStatsCtrl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CalculateConstantsControl.resx">
+      <DependentUpon>CalculateConstantsControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyComponents\CynthiaParsSummaryCtrl.resx">
+      <DependentUpon>CynthiaParsSummaryCtrl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyComponents\CynthiaProjectionsCtrl.resx">
+      <DependentUpon>CynthiaProjectionsCtrl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyComponents\CynthiaProjectionsFullCtrl.resx">
+      <DependentUpon>CynthiaProjectionsFullCtrl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyComponents\FactorAnalysisCtrl.resx">
+      <DependentUpon>FactorAnalysisCtrl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyComponents\FactorPerfomanceCtrl.resx">
+      <DependentUpon>FactorPerfomanceCtrl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyComponents\FractionTimesCtrl.resx">
+      <DependentUpon>FractionTimesCtrl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyComponents\HandicappingFactorLabel.resx">
+      <DependentUpon>HandicappingFactorLabel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyComponents\HorseFractionsComponent.resx">
+      <DependentUpon>HorseFractionsComponent.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyComponents\NumericTextBox.resx">
+      <DependentUpon>NumericTextBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyComponents\OddsControl.resx">
+      <DependentUpon>OddsControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyComponents\PrimitiveHandicappingFactorControl.resx">
+      <DependentUpon>PrimitiveHandicappingFactorControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyComponents\RaceCommentsCtrl.resx">
+      <DependentUpon>RaceCommentsCtrl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyComponents\RaceSummaryControl.resx">
+      <DependentUpon>RaceSummaryControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyComponents\SelectFileControl.resx">
+      <DependentUpon>SelectFileControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyComponents\ShortRaceChartControl.resx">
+      <DependentUpon>ShortRaceChartControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyComponents\ShowRunTogethersControl.resx">
+      <DependentUpon>ShowRunTogethersControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyComponents\TextEditorControl.resx">
+      <DependentUpon>TextEditorControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyComponents\TrifectaPayoutsControl.resx">
+      <DependentUpon>TrifectaPayoutsControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyComponents\TrifectaPicksControl.resx">
+      <DependentUpon>TrifectaPicksControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyComponents\TrifectaSubsystemsControl.resx">
+      <DependentUpon>TrifectaSubsystemsControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyComponents\W2WStatsCtrl.resx">
+      <DependentUpon>W2WStatsCtrl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyComponents\WorkoutComponent.resx">
+      <DependentUpon>WorkoutComponent.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\IndividualHorsePastPerformancesForm.resx">
+      <DependentUpon>IndividualHorsePastPerformancesForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Summary.resx">
+      <DependentUpon>Summary.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ChangeTotalAmountBetForm.resx">
+      <DependentUpon>ChangeTotalAmountBetForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditCommentsForm.resx">
+      <DependentUpon>EditCommentsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FractionSpeedForm.resx">
+      <DependentUpon>FractionSpeedForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\HorseDetailsForm.resx">
+      <DependentUpon>HorseDetailsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectOddFilenameForm.resx">
+      <DependentUpon>SelectOddFilenameForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ShowAllTimeGraphsForm.resx">
+      <DependentUpon>ShowAllTimeGraphsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="UITools\FieldValidator.cs" />
+    <Compile Include="UITools\IUndoableField.cs" />
+    <Compile Include="UITools\IValidableField.cs" />
+    <Compile Include="UITools\UITools.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HogarControlLibrary\HogarControlLibrary.csproj">
+      <Project>{F658D183-6E43-4F72-8E53-A917CBF620B4}</Project>
+      <Name>HogarControlLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hogar\Hogar.csproj">
+      <Project>{43DCA87F-515A-4CA5-AC20-4855D33860FA}</Project>
+      <Name>Hogar</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RaceResultsViewer\RaceResultsViewer.csproj">
+      <Project>{092BC2CF-0365-4BA8-B359-29F61AE72294}</Project>
+      <Name>RaceResultsViewer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="appicon.ico" />
+    <Content Include="horse_image.jpg" />
+    <None Include="Resources\ContenderHorse.jpg" />
+    <None Include="Resources\Donkey.bmp" />
+    <Compile Include="Dialogs\BestBetsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\BestBetsForm.Designer.cs">
+      <DependentUpon>BestBetsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\BetViewer\BetInfo.cs" />
+    <Compile Include="Dialogs\BreadAndButterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\BreadAndButterForm.Designer.cs">
+      <DependentUpon>BreadAndButterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FactorAnalysisForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FactorAnalysisForm.Designer.cs">
+      <DependentUpon>FactorAnalysisForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FactorStatsPerTrainer\FactorStatsPerTrainerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FactorStatsPerTrainer\FactorStatsPerTrainerForm.Designer.cs">
+      <DependentUpon>FactorStatsPerTrainerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FactorStatsPerTrainer\Starter.cs" />
+    <Compile Include="Dialogs\FactorStatsPerTrainer\StarterCollection.cs" />
+    <Compile Include="Dialogs\FactorStatsPerTrainer\StatisticPerFactor.cs" />
+    <Compile Include="Dialogs\FactorStatsPerTrainer\TrainerSummary.cs" />
+    <Compile Include="Dialogs\FactorWorkbench\FactorWorkbenchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FactorWorkbench\FactorWorkbenchForm.Designer.cs">
+      <DependentUpon>FactorWorkbenchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FactorWorkbench\GroupingInfo.cs" />
+    <Compile Include="Dialogs\FactorWorkbench\GroupType.cs" />
+    <Compile Include="Dialogs\FactorWorkbench\HorseInfo.cs" />
+    <Compile Include="Dialogs\Filter\FiltersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Filter\FiltersForm.Designer.cs">
+      <DependentUpon>FiltersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\HistogramForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\HistogramForm.Designer.cs">
+      <DependentUpon>HistogramForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ImpactValueForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ImpactValueForm.Designer.cs">
+      <DependentUpon>ImpactValueForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\JockeyStatistics\JockeyStatisticsForm.PrivateTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\JockeyStatistics\JockeyStatisticsSummaryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\JockeyStatistics\JockeyStatisticsSummaryForm.Designer.cs">
+      <DependentUpon>JockeyStatisticsSummaryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\KeyRacesViewer\HorseCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\KeyRacesViewer\HorseCtrl.Designer.cs">
+      <DependentUpon>HorseCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\KeyRacesViewer\KeyRacesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\KeyRacesViewer\KeyRacesForm.Designer.cs">
+      <DependentUpon>KeyRacesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\KeyRacesViewer\RaceInfoCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\KeyRacesViewer\RaceInfoCtrl.Designer.cs">
+      <DependentUpon>RaceInfoCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\PaceFigures\PaceFigure.cs" />
+    <Compile Include="Dialogs\PaceFigures\PaceFigureCollection.cs" />
+    <Compile Include="Dialogs\PaceFigures\PaceFigureFilter.cs" />
+    <Compile Include="Dialogs\PaceFigures\PaceFiguresFilterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\PaceFigures\PaceFiguresFilterForm.Designer.cs">
+      <DependentUpon>PaceFiguresFilterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\PaceFigures\PaceFiguresForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\PaceFigures\PaceFiguresForm.Designer.cs">
+      <DependentUpon>PaceFiguresForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\PostPositionStatsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\PostPositionStatsForm.Designer.cs">
+      <DependentUpon>PostPositionStatsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\PythonEditor\AutoCompletion.cs" />
+    <Compile Include="Dialogs\PythonEditor\PythonEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\PythonEditor\PythonEditorForm.Designer.cs">
+      <DependentUpon>PythonEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\RaceAnalyzer\RaceAnalyzerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\RaceAnalyzer\RaceAnalyzerForm.Designer.cs">
+      <DependentUpon>RaceAnalyzerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\SelectCard\RaceInfo.cs" />
+    <Compile Include="Dialogs\SelectCard\RaceInfoCollection.cs" />
+    <Compile Include="Dialogs\SelectCard\RaceStarter.cs" />
+    <Compile Include="Dialogs\SelectCard\RaceStarterCollection.cs" />
+    <Compile Include="Dialogs\SelectCard\SelectCardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\SelectCard\SelectCardForm.Designer.cs">
+      <DependentUpon>SelectCardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ShowVotesForAllOddsCategoriesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ShowVotesForAllOddsCategoriesForm.Designer.cs">
+      <DependentUpon>ShowVotesForAllOddsCategoriesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\SpeedAnalysisForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\SpeedAnalysisForm.Designer.cs">
+      <DependentUpon>SpeedAnalysisForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\StatsForAllTrainersInTheRaceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\StatsForAllTrainersInTheRaceForm.Designer.cs">
+      <DependentUpon>StatsForAllTrainersInTheRaceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Testing\TestingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Testing\TestingForm.Designer.cs">
+      <DependentUpon>TestingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\WinnersForDay\DateOfRace.cs" />
+    <Compile Include="Dialogs\WinnersForDay\IFractionalTimes.cs" />
+    <Compile Include="Dialogs\WinnersForDay\RaceInfo.cs" />
+    <Compile Include="Dialogs\WinnersForDay\StarterInfo.cs" />
+    <Compile Include="Dialogs\WinnersForDay\TimeComparisonCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\WinnersForDay\TimeComparisonCtrl.Designer.cs">
+      <DependentUpon>TimeComparisonCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\WinnersForDay\WinnerInfo.cs" />
+    <Compile Include="Dialogs\WinnersForDay\XRayCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\WinnersForDay\XRayCtrl.Designer.cs">
+      <DependentUpon>XRayCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyComponents\BrisFiguresStatsCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyComponents\BrisFiguresStatsCtrl.Designer.cs">
+      <DependentUpon>BrisFiguresStatsCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyComponents\FactorAnalysisCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyComponents\FactorAnalysisCtrl.Designer.cs">
+      <DependentUpon>FactorAnalysisCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ShowAllTimeGraphsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ShowAllTimeGraphsForm.Designer.cs">
+      <DependentUpon>ShowAllTimeGraphsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyComponents\W2WStatsCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyComponents\W2WStatsCtrl.Designer.cs">
+      <DependentUpon>W2WStatsCtrl.cs</DependentUpon>
+    </Compile>
+    <None Include="Resources\Star-icon.png" />
+    <None Include="Resources\Pointer.jpg" />
+    <None Include="Resources\NonPointer.jpg" />
+    <None Include="Resources\PointerImage.bmp" />
+    <None Include="Resources\start_feed.jpg" />
+    <None Include="Resources\stop_feed.jpg" />
+    <None Include="Resources\RagsToRichesWinsBelmont.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Dialogs\RunningLineSelector\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

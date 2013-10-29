@@ -1,0 +1,357 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Sipp
+{
+    internal class NormalDistribution
+    {
+        private static Dictionary<double, double> _partialValue = new Dictionary<double, double>();
+
+        static private double Mean { get; set; }
+
+        static private double StandardDeviation { get; set; }
+
+        static private double ZScore(double x)
+        {
+            return StandardDeviation != 0 ? Math.Round((x - Mean) / StandardDeviation, 2) : 0;
+        }
+
+        static public double GetProbabilityOfLessThanThis(double mean, double stdev, double v)
+        {
+            Mean = mean;
+            StandardDeviation = stdev;
+            double z = ZScore(v);
+            if (z >= 0)
+            {
+                return z > 3.09 ? 1.0 : _partialValue[z];
+            }
+            else
+            {
+                z *= -1.0;
+                return z > 3.09 ? 0 : 1 - _partialValue[z];
+            }
+        }
+
+        static public double GetProbabilityOfMoreThanThis(double mean, double stdev, double v)
+        {
+            return 1 - GetProbabilityOfLessThanThis(mean,stdev,v);
+        }
+
+
+        static NormalDistribution()
+        {
+            _partialValue[0] = 0.5;
+            _partialValue[0.01] = 0.504;
+            _partialValue[0.02] = 0.508;
+            _partialValue[0.03] = 0.512;
+            _partialValue[0.04] = 0.516;
+            _partialValue[0.05] = 0.5199;
+            _partialValue[0.06] = 0.5239;
+            _partialValue[0.07] = 0.5279;
+            _partialValue[0.08] = 0.5319;
+            _partialValue[0.09] = 0.5359;
+            _partialValue[0.1] = 0.5398;
+            _partialValue[0.11] = 0.5438;
+            _partialValue[0.12] = 0.5478;
+            _partialValue[0.13] = 0.5517;
+            _partialValue[0.14] = 0.5557;
+            _partialValue[0.15] = 0.5596;
+            _partialValue[0.16] = 0.5636;
+            _partialValue[0.17] = 0.5675;
+            _partialValue[0.18] = 0.5714;
+            _partialValue[0.19] = 0.5753;
+            _partialValue[0.2] = 0.5793;
+            _partialValue[0.21] = 0.5832;
+            _partialValue[0.22] = 0.5871;
+            _partialValue[0.23] = 0.591;
+            _partialValue[0.24] = 0.5948;
+            _partialValue[0.25] = 0.5987;
+            _partialValue[0.26] = 0.6026;
+            _partialValue[0.27] = 0.6064;
+            _partialValue[0.28] = 0.6103;
+            _partialValue[0.29] = 0.6141;
+            _partialValue[0.3] = 0.6179;
+            _partialValue[0.31] = 0.6217;
+            _partialValue[0.32] = 0.6255;
+            _partialValue[0.33] = 0.6293;
+            _partialValue[0.34] = 0.6331;
+            _partialValue[0.35] = 0.6368;
+            _partialValue[0.36] = 0.6406;
+            _partialValue[0.37] = 0.6443;
+            _partialValue[0.38] = 0.648;
+            _partialValue[0.39] = 0.6517;
+            _partialValue[0.4] = 0.6554;
+            _partialValue[0.41] = 0.6591;
+            _partialValue[0.42] = 0.6628;
+            _partialValue[0.43] = 0.6664;
+            _partialValue[0.44] = 0.67;
+            _partialValue[0.45] = 0.6736;
+            _partialValue[0.46] = 0.6772;
+            _partialValue[0.47] = 0.6808;
+            _partialValue[0.48] = 0.6844;
+            _partialValue[0.49] = 0.6879;
+            _partialValue[0.5] = 0.6915;
+            _partialValue[0.51] = 0.695;
+            _partialValue[0.52] = 0.6985;
+            _partialValue[0.53] = 0.7019;
+            _partialValue[0.54] = 0.7054;
+            _partialValue[0.55] = 0.7088;
+            _partialValue[0.56] = 0.7123;
+            _partialValue[0.57] = 0.7157;
+            _partialValue[0.58] = 0.719;
+            _partialValue[0.59] = 0.7224;
+            _partialValue[0.6] = 0.7257;
+            _partialValue[0.61] = 0.7291;
+            _partialValue[0.62] = 0.7324;
+            _partialValue[0.63] = 0.7357;
+            _partialValue[0.64] = 0.7389;
+            _partialValue[0.65] = 0.7422;
+            _partialValue[0.66] = 0.7454;
+            _partialValue[0.67] = 0.7486;
+            _partialValue[0.68] = 0.7517;
+            _partialValue[0.69] = 0.7549;
+            _partialValue[0.7] = 0.758;
+            _partialValue[0.71] = 0.7611;
+            _partialValue[0.72] = 0.7642;
+            _partialValue[0.73] = 0.7673;
+            _partialValue[0.74] = 0.7704;
+            _partialValue[0.75] = 0.7734;
+            _partialValue[0.76] = 0.7764;
+            _partialValue[0.77] = 0.7794;
+            _partialValue[0.78] = 0.7823;
+            _partialValue[0.79] = 0.7852;
+            _partialValue[0.8] = 0.7881;
+            _partialValue[0.81] = 0.791;
+            _partialValue[0.82] = 0.7939;
+            _partialValue[0.83] = 0.7967;
+            _partialValue[0.84] = 0.7995;
+            _partialValue[0.85] = 0.8023;
+            _partialValue[0.86] = 0.8051;
+            _partialValue[0.87] = 0.8078;
+            _partialValue[0.88] = 0.8106;
+            _partialValue[0.89] = 0.8133;
+            _partialValue[0.9] = 0.8159;
+            _partialValue[0.91] = 0.8186;
+            _partialValue[0.92] = 0.8212;
+            _partialValue[0.93] = 0.8238;
+            _partialValue[0.94] = 0.8264;
+            _partialValue[0.95] = 0.8289;
+            _partialValue[0.96] = 0.8315;
+            _partialValue[0.97] = 0.834;
+            _partialValue[0.98] = 0.8365;
+            _partialValue[0.99] = 0.8389;
+            _partialValue[1] = 0.8413;
+            _partialValue[1.01] = 0.8438;
+            _partialValue[1.02] = 0.8461;
+            _partialValue[1.03] = 0.8485;
+            _partialValue[1.04] = 0.8508;
+            _partialValue[1.05] = 0.8531;
+            _partialValue[1.06] = 0.8554;
+            _partialValue[1.07] = 0.8577;
+            _partialValue[1.08] = 0.8599;
+            _partialValue[1.09] = 0.8621;
+            _partialValue[1.1] = 0.8643;
+            _partialValue[1.11] = 0.8665;
+            _partialValue[1.12] = 0.8686;
+            _partialValue[1.13] = 0.8708;
+            _partialValue[1.14] = 0.8729;
+            _partialValue[1.15] = 0.8749;
+            _partialValue[1.16] = 0.877;
+            _partialValue[1.17] = 0.879;
+            _partialValue[1.18] = 0.881;
+            _partialValue[1.19] = 0.883;
+            _partialValue[1.2] = 0.8849;
+            _partialValue[1.21] = 0.8869;
+            _partialValue[1.22] = 0.8888;
+            _partialValue[1.23] = 0.8907;
+            _partialValue[1.24] = 0.8925;
+            _partialValue[1.25] = 0.8944;
+            _partialValue[1.26] = 0.8962;
+            _partialValue[1.27] = 0.898;
+            _partialValue[1.28] = 0.8997;
+            _partialValue[1.29] = 0.9015;
+            _partialValue[1.3] = 0.9032;
+            _partialValue[1.31] = 0.9049;
+            _partialValue[1.32] = 0.9066;
+            _partialValue[1.33] = 0.9082;
+            _partialValue[1.34] = 0.9099;
+            _partialValue[1.35] = 0.9115;
+            _partialValue[1.36] = 0.9131;
+            _partialValue[1.37] = 0.9147;
+            _partialValue[1.38] = 0.9162;
+            _partialValue[1.39] = 0.9177;
+            _partialValue[1.4] = 0.9192;
+            _partialValue[1.41] = 0.9207;
+            _partialValue[1.42] = 0.9222;
+            _partialValue[1.43] = 0.9236;
+            _partialValue[1.44] = 0.9251;
+            _partialValue[1.45] = 0.9265;
+            _partialValue[1.46] = 0.9279;
+            _partialValue[1.47] = 0.9292;
+            _partialValue[1.48] = 0.9306;
+            _partialValue[1.49] = 0.9319;
+            _partialValue[1.5] = 0.9332;
+            _partialValue[1.51] = 0.9345;
+            _partialValue[1.52] = 0.9357;
+            _partialValue[1.53] = 0.937;
+            _partialValue[1.54] = 0.9382;
+            _partialValue[1.55] = 0.9394;
+            _partialValue[1.56] = 0.9406;
+            _partialValue[1.57] = 0.9418;
+            _partialValue[1.58] = 0.9429;
+            _partialValue[1.59] = 0.9441;
+            _partialValue[1.6] = 0.9452;
+            _partialValue[1.61] = 0.9463;
+            _partialValue[1.62] = 0.9474;
+            _partialValue[1.63] = 0.9484;
+            _partialValue[1.64] = 0.9495;
+            _partialValue[1.65] = 0.9505;
+            _partialValue[1.66] = 0.9515;
+            _partialValue[1.67] = 0.9525;
+            _partialValue[1.68] = 0.9535;
+            _partialValue[1.69] = 0.9545;
+            _partialValue[1.7] = 0.9554;
+            _partialValue[1.71] = 0.9564;
+            _partialValue[1.72] = 0.9573;
+            _partialValue[1.73] = 0.9582;
+            _partialValue[1.74] = 0.9591;
+            _partialValue[1.75] = 0.9599;
+            _partialValue[1.76] = 0.9608;
+            _partialValue[1.77] = 0.9616;
+            _partialValue[1.78] = 0.9625;
+            _partialValue[1.79] = 0.9633;
+            _partialValue[1.8] = 0.9641;
+            _partialValue[1.81] = 0.9649;
+            _partialValue[1.82] = 0.9656;
+            _partialValue[1.83] = 0.9664;
+            _partialValue[1.84] = 0.9671;
+            _partialValue[1.85] = 0.9678;
+            _partialValue[1.86] = 0.9686;
+            _partialValue[1.87] = 0.9693;
+            _partialValue[1.88] = 0.9699;
+            _partialValue[1.89] = 0.9706;
+            _partialValue[1.9] = 0.9713;
+            _partialValue[1.91] = 0.9719;
+            _partialValue[1.92] = 0.9726;
+            _partialValue[1.93] = 0.9732;
+            _partialValue[1.94] = 0.9738;
+            _partialValue[1.95] = 0.9744;
+            _partialValue[1.96] = 0.975;
+            _partialValue[1.97] = 0.9756;
+            _partialValue[1.98] = 0.9761;
+            _partialValue[1.99] = 0.9767;
+            _partialValue[2] = 0.9772;
+            _partialValue[2.01] = 0.9778;
+            _partialValue[2.02] = 0.9783;
+            _partialValue[2.03] = 0.9788;
+            _partialValue[2.04] = 0.9793;
+            _partialValue[2.05] = 0.9798;
+            _partialValue[2.06] = 0.9803;
+            _partialValue[2.07] = 0.9808;
+            _partialValue[2.08] = 0.9812;
+            _partialValue[2.09] = 0.9817;
+            _partialValue[2.1] = 0.9821;
+            _partialValue[2.11] = 0.9826;
+            _partialValue[2.12] = 0.983;
+            _partialValue[2.13] = 0.9834;
+            _partialValue[2.14] = 0.9838;
+            _partialValue[2.15] = 0.9842;
+            _partialValue[2.16] = 0.9846;
+            _partialValue[2.17] = 0.985;
+            _partialValue[2.18] = 0.9854;
+            _partialValue[2.19] = 0.9857;
+            _partialValue[2.2] = 0.9861;
+            _partialValue[2.21] = 0.9864;
+            _partialValue[2.22] = 0.9868;
+            _partialValue[2.23] = 0.9871;
+            _partialValue[2.24] = 0.9875;
+            _partialValue[2.25] = 0.9878;
+            _partialValue[2.26] = 0.9881;
+            _partialValue[2.27] = 0.9884;
+            _partialValue[2.28] = 0.9887;
+            _partialValue[2.29] = 0.989;
+            _partialValue[2.3] = 0.9893;
+            _partialValue[2.31] = 0.9896;
+            _partialValue[2.32] = 0.9898;
+            _partialValue[2.33] = 0.9901;
+            _partialValue[2.34] = 0.9904;
+            _partialValue[2.35] = 0.9906;
+            _partialValue[2.36] = 0.9909;
+            _partialValue[2.37] = 0.9911;
+            _partialValue[2.38] = 0.9913;
+            _partialValue[2.39] = 0.9916;
+            _partialValue[2.4] = 0.9918;
+            _partialValue[2.41] = 0.992;
+            _partialValue[2.42] = 0.9922;
+            _partialValue[2.43] = 0.9925;
+            _partialValue[2.44] = 0.9927;
+            _partialValue[2.45] = 0.9929;
+            _partialValue[2.46] = 0.9931;
+            _partialValue[2.47] = 0.9932;
+            _partialValue[2.48] = 0.9934;
+            _partialValue[2.49] = 0.9936;
+            _partialValue[2.5] = 0.9938;
+            _partialValue[2.51] = 0.994;
+            _partialValue[2.52] = 0.9941;
+            _partialValue[2.53] = 0.9943;
+            _partialValue[2.54] = 0.9945;
+            _partialValue[2.55] = 0.9946;
+            _partialValue[2.56] = 0.9948;
+            _partialValue[2.57] = 0.9949;
+            _partialValue[2.58] = 0.9951;
+            _partialValue[2.59] = 0.9952;
+            _partialValue[2.6] = 0.9953;
+            _partialValue[2.61] = 0.9955;
+            _partialValue[2.62] = 0.9956;
+            _partialValue[2.63] = 0.9957;
+            _partialValue[2.64] = 0.9959;
+            _partialValue[2.65] = 0.996;
+            _partialValue[2.66] = 0.9961;
+            _partialValue[2.67] = 0.9962;
+            _partialValue[2.68] = 0.9963;
+            _partialValue[2.69] = 0.9964;
+            _partialValue[2.7] = 0.9965;
+            _partialValue[2.71] = 0.9966;
+            _partialValue[2.72] = 0.9967;
+            _partialValue[2.73] = 0.9968;
+            _partialValue[2.74] = 0.9969;
+            _partialValue[2.75] = 0.997;
+            _partialValue[2.76] = 0.9971;
+            _partialValue[2.77] = 0.9972;
+            _partialValue[2.78] = 0.9973;
+            _partialValue[2.79] = 0.9974;
+            _partialValue[2.8] = 0.9974;
+            _partialValue[2.81] = 0.9975;
+            _partialValue[2.82] = 0.9976;
+            _partialValue[2.83] = 0.9977;
+            _partialValue[2.84] = 0.9977;
+            _partialValue[2.85] = 0.9978;
+            _partialValue[2.86] = 0.9979;
+            _partialValue[2.87] = 0.9979;
+            _partialValue[2.88] = 0.998;
+            _partialValue[2.89] = 0.9981;
+            _partialValue[2.9] = 0.9981;
+            _partialValue[2.91] = 0.9982;
+            _partialValue[2.92] = 0.9982;
+            _partialValue[2.93] = 0.9983;
+            _partialValue[2.94] = 0.9984;
+            _partialValue[2.95] = 0.9984;
+            _partialValue[2.96] = 0.9985;
+            _partialValue[2.97] = 0.9985;
+            _partialValue[2.98] = 0.9986;
+            _partialValue[2.99] = 0.9986;
+            _partialValue[3] = 0.9987;
+            _partialValue[3.01] = 0.9987;
+            _partialValue[3.02] = 0.9987;
+            _partialValue[3.03] = 0.9988;
+            _partialValue[3.04] = 0.9988;
+            _partialValue[3.05] = 0.9989;
+            _partialValue[3.06] = 0.9989;
+            _partialValue[3.07] = 0.9989;
+            _partialValue[3.08] = 0.999;
+            _partialValue[3.09] = 0.999;
+        }
+    }
+}

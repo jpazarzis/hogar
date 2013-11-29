@@ -6,7 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using NPlot;
+//using NPlot;
 
 
 
@@ -25,6 +25,7 @@ namespace ExoticStudio.UserControls
         
         public void DisplayGraph(DataSet dataSet)
         {
+			/*
             _graph.Clear();
 
             if (null == dataSet)
@@ -50,7 +51,9 @@ namespace ExoticStudio.UserControls
             _graph.YAxis1.LabelOffset = 40;
             _graph.Padding = 5;
             _graph.AddAxesConstraint(new AxesConstraint.AxisPosition(PlotSurface2D.YAxisPosition.Left, 60));
+            */
         }
+
 
         
     }

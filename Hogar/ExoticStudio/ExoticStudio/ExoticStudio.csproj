@@ -78,7 +78,6 @@
       <RequiredTargetFramework>3.0</RequiredTargetFramework>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.configuration" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
@@ -101,6 +100,7 @@
     <Reference Include="WindowsBase">
       <RequiredTargetFramework>3.0</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.Configuration" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AboutBox.cs">
@@ -128,12 +128,6 @@
     </Compile>
     <Compile Include="BusinessLogic\Limitation.cs" />
     <Compile Include="BusinessLogic\LimitationGroup.cs" />
-    <Compile Include="Dialogs\ShowAverageOddsForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Dialogs\ShowAverageOddsForm.Designer.cs">
-      <DependentUpon>ShowAverageOddsForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Dialogs\WeightStatisticsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,10 +154,6 @@
       <DependentUpon>FrequenciesForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dialogs\ShowAverageOddsForm.resx">
-      <DependentUpon>ShowAverageOddsForm.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\WeightStatisticsForm.resx">
       <DependentUpon>WeightStatisticsForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -178,10 +168,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\FullSystemForm.resx">
       <DependentUpon>FullSystemForm.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\FrequencyGraph.resx">
-      <DependentUpon>FrequencyGraph.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\GroupEditor.resx">
@@ -232,12 +218,6 @@
     </Compile>
     <Compile Include="BusinessLogic\FullSystem.cs" />
     <Compile Include="Tools.cs" />
-    <Compile Include="UserControls\FrequencyGraph.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\FrequencyGraph.Designer.cs">
-      <DependentUpon>FrequencyGraph.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControls\GroupEditor.cs">
       <SubType>UserControl</SubType>
     </Compile>
